@@ -117,9 +117,9 @@ int main( int argc, char** argv)
     Mat img1Warped = img2.clone();
 	
     //Read points
-	vector<Point2f> points1, points2;
-	points1 = readPoints(filename1 + ".txt");
-	points2 = readPoints(filename2 + ".txt");
+    vector<Point2f> points1, points2;
+    points1 = readPoints(filename1 + ".txt");
+    points2 = readPoints(filename2 + ".txt");
     
     //convert Mat to float data type
     img1.convertTo(img1, CV_32F);

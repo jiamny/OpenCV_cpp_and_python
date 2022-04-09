@@ -1,15 +1,16 @@
-#include <opencv2/opencv.hpp>
-#include <opencv2/face.hpp>
 #include "drawLandmarks.hpp"
-
+#include <unistd.h>
+#include <iomanip>
 
 using namespace std;
 using namespace cv;
 using namespace cv::face;
 
 
-int main(int argc,char** argv)
-{
+int main(int argc,char** argv) {
+
+	std::cout << "Current path is " << get_current_dir_name() << '\n';
+
     // Load Face Detector
     CascadeClassifier faceDetector("./src/FacialLandmarkDetection/haarcascade_frontalface_alt2.xml");
 
@@ -17,11 +18,11 @@ int main(int argc,char** argv)
     Ptr<Facemark> facemark = FacemarkLBF::create();
 
     // Load landmark detector
-    facemark->loadModel("./src/Building_an_eye_tracker_with_openCV/assets/lbfmodel.yaml");
+    facemark->loadModel("./src/FacialLandmarkDetection/lbfmodel.yaml");
 
     // Set up webcam for video capture
     // VideoCapture cam(0);
-    VideoCapture cam("./src/Building_an_eye_tracker_with_openCV/Video.mp4");
+    VideoCapture cam("./src/FacialLandmarkDetection/Video.mp4");
     
     // Variable to store a video frame and its grayscale 
     Mat frame, gray;
@@ -33,7 +34,7 @@ int main(int argc,char** argv)
       vector<Rect> faces;
       // Convert frame to grayscale because
       // faceDetector requires grayscale image.
-      cvtColor(frame, gray, COLOR_BGR2GRAY);
+      cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
 
       // Detect faces
       faceDetector.detectMultiScale(gray, faces);

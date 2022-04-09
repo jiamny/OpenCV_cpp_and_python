@@ -108,8 +108,7 @@ int main() {
 	cvtColor(medianFrame, grayMedianFrame, COLOR_BGR2GRAY);
 
 	// Loop over all frames
-	while (1)
-	{
+	while (1)	{
 		// Read frame
 		// 读取帧
 		cap >> frame;

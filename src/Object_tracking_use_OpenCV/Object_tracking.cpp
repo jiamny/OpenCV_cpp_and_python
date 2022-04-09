@@ -5,12 +5,13 @@
 #include <opencv2/core/ocl.hpp>
 #include <opencv2/core/core.hpp>
 #include <iostream>
+#include <sstream>
 
 using namespace cv;
 using namespace std;
 
 // Convert to string
-#define SSTR( x ) static_cast< std::ostringstream & >(( std::ostringstream() << std::dec << x ) ).str()
+#define SSTR( x ) static_cast< std::ostringstream >(( std::ostringstream() << std::dec << x ) ).str()
 
 int main(int argc, char **argv)
 {
@@ -21,7 +22,7 @@ int main(int argc, char **argv)
     // Create a tracker
     string trackerType = trackerTypes[7];
 
-    Ptr<Tracker> tracker;
+    Ptr<cv::Tracker> tracker;
 
 //    if (trackerType == "BOOSTING")
 //        tracker = TrackerBoosting::create();

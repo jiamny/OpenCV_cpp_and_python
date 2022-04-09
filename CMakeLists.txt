@@ -1,10 +1,12 @@
-cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
 
 project(OpenCV_cpp_and_python  VERSION 1.0.0 LANGUAGES CXX)
 
 # Requires OpenCV
+# Requires OpenCV
 FIND_PACKAGE( OpenCV 4.5.3 REQUIRED )
 MESSAGE("OpenCV version : ${OpenCV_VERSION}")
+INCLUDE_DIRECTORIES( ${OpenCV_INCLUDE_DIRS} ) 
 
 # Add  sub-projects:
 add_subdirectory("src/AgeGender")	

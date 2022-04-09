@@ -53,8 +53,7 @@ void get_opencv_result(String video_to_process) {
 }
 
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
     CommandLineParser parser(argc, argv, input_params);
     // start BS-pipeline
     get_opencv_result(parser.get<String>("input"));

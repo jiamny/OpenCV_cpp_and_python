@@ -1,5 +1,7 @@
 #ifndef _renderFace_H_
 #define _renderFace_H_
+#include <opencv4/opencv2/opencv.hpp>
+#include <opencv4/opencv2/face.hpp>
 
 using namespace cv; 
 using namespace std; 

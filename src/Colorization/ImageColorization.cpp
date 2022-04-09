@@ -108,7 +108,7 @@ int main() {
 	//保存图像
 	string str = imageFileName;
 	str.replace(str.end() - 4, str.end(), "");
-	str = str + "_colorized.png";
+	str = (str + "_colorized.png");
 
 	//反归一化
 	color = color * 255;

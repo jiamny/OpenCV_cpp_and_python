@@ -6,9 +6,9 @@ Collected OpenCV practical projects with c++ and python
 
 - cmake 3.16+
 
-- python3.8
+- python3.8+
 
-- opencv 4.5.3
+- opencv 4.5.3/4.5.5
 
 - matplotlib-cpp
 
@@ -16,9 +16,9 @@ Collected OpenCV practical projects with c++ and python
 
 - png++
 
-- ubuntu 20.04
+- ubuntu 21.10
 
-- gcc-9/g++-9 for C++ 14 and 17
+- gcc-11/g++-11 for C++ 14 and 17
 
 
 ## Reference links
